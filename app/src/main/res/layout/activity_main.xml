@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" tools:context="com.example.user.work9.MainActivity">
+    <LinearLayout
+        android:visibility="invisible"
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#a2ff00"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp">
+            <ImageView
+                android:layout_width="27dp"
+                android:layout_height="35dp"
+                android:src="@drawable/flower1"/>
+            <TextView
+                android:textSize="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="날짜 선택 후 메모를 입력하세요"/>
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="저장"/>
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="취소"/>
+        </LinearLayout>
+
+        <DatePicker
+            android:id="@+id/datePicker"
+            android:scaleY="0.8"
+            android:calendarViewShown="false"
+            android:layout_marginTop="-20dp"
+            android:datePickerMode="spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_weight="1"
+            android:background="#fff1fb"
+            android:gravity="center"
+            android:hint="이 부분에 메모를 입력하세요"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ff0"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="27dp"
+                android:layout_height="35dp"
+                android:src="@drawable/flower1"/>
+
+            <TextView
+                android:id="@+id/tvCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="등록된 메모 개수: 0"/>
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:onClick="onClick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="일기등록"/>
+
+
+
+        </LinearLayout>
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#30ff0000"/>
+    </LinearLayout>
+
+</FrameLayout>
